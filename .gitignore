@@ -1,0 +1,36 @@
+# Secrets & Environment Variables (NEVER upload .env to GitHub!)
+.env
+.env.*
+!.env.example
+
+# Python Virtual Environments & Caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Local Model Caches (FlashRank / FastEmbed / HuggingFace)
+.cache/
+models/
+*.onnx
+
+# Docker & Local Database Data
+qdrant_data/
+redis_data/
+*.rdb
+*.sqlite3
+
+# Logs & Temp Files
+*.log
+logs/
+tmp/
+
+# IDE / OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
