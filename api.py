@@ -78,3 +78,7 @@ async def ingest_policy(req: IngestRequest):
     chunk_count = indexer.index_policy(req.content, meta)
     await qa_service.invalidate_cache_on_ingest()
     return {"policy_id": req.policy_id, "chunks_indexed": chunk_count}
+
+@app.get("/")
+async def root():
+    return {"status": "running", "docs_url": "/docs"}
